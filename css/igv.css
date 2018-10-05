@@ -608,7 +608,7 @@
   right: 0;
   width: 14px;
   height: 100%;
-  background-color: white; }
+  background-color: transparent; }
   .igv-scrollbar-outer-div div {
     position: absolute;
     top: 0;

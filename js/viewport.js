@@ -310,7 +310,10 @@ var igv = (function (igv) {
                     selection: self.selection,
                     viewportWidth: self.$viewport.width(),
                     viewportContainerX: referenceFrame.toPixels(referenceFrame.start - tile.startBP),
-                    viewportContainerWidth: this.browser.viewportContainerWidth()
+                    viewportContainerWidth: this.browser.viewportContainerWidth(),
+                    theme: {
+                        background: {'fillStyle': "rgb(255, 0, 0)"},
+                    },
                 };
 
             draw(drawConfiguration, tile.features);
@@ -363,7 +366,8 @@ var igv = (function (igv) {
                     selection: self.selection,
                     viewportWidth: pixelWidth,
                     viewportContainerX: 0,
-                    viewportContainerWidth: this.browser.viewportContainerWidth()
+                    viewportContainerWidth: this.browser.viewportContainerWidth(),
+                    _backgroundTestA: "a",
                 };
 
             draw(drawConfiguration, tile.features);
