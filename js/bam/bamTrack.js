@@ -208,8 +208,7 @@ var igv = (function (igv) {
         };
 
         BAMTrack.prototype.draw = function (options) {
-
-            igv.graphics.fillRect(options.context, 0, 0, options.pixelWidth, options.pixelHeight, {'fillStyle': "rgb(255, 255, 255)"});
+            igv.graphics.fillRect(options.context, 0, 0, options.pixelWidth, options.pixelHeight, options.theme.background);
 
             if (this.coverageTrack.height > 0) {
                 this.coverageTrack.draw(options);
