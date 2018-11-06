@@ -318,14 +318,15 @@ var igv = (function (igv) {
             font = {
                 'font': 'normal 10px Arial',
                 'textAlign': 'right',
-                'strokeStyle': "black"
+                'fillStyle': igv.browser.theme.axisFontColor,
+                'strokeStyle': igv.browser.theme.axisFontColor,
             };
 
         if (undefined === this.dataRange || undefined === this.dataRange.max || undefined === this.dataRange.min) {
             return;
         }
 
-        igv.graphics.fillRect(ctx, 0, 0, pixelWidth, pixelHeight, {'fillStyle': "rgb(255, 255, 255)"});
+        igv.graphics.fillRect(ctx, 0, 0, pixelWidth, pixelHeight, {'fillStyle': igv.browser.theme.axisBgColor});
 
         reference = 0.95 * pixelWidth;
         x1 = reference - 8;
