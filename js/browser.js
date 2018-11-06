@@ -47,7 +47,8 @@ var igv = (function (igv) {
         this.cursorGuideVisible = false;
 
         this.featureDB = {};   // Hash of name -> feature, used for search function.
-
+        
+        
         this.constants = {
             dragThreshold: 3,
             scrollThreshold: 5,

@@ -278,7 +278,7 @@ var igv = (function (igv) {
                 return;
             }
 
-            igv.graphics.fillRect(ctx, 0, 0, width, height, {fillStyle: igv.Color.greyScale(255)});
+            igv.graphics.fillRect(ctx, 0, 0, width, height, {fillStyle: browser.theme.ideogramBgColor});
 
             cytobands = browser.genome.getCytobands(referenceFrame.chrName);
             if (cytobands) {

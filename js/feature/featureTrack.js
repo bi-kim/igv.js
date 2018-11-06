@@ -233,7 +233,7 @@ var igv = (function (igv) {
             const bpEnd = bpStart + pixelWidth * bpPerPixel + 1;
 
 
-            igv.graphics.fillRect(ctx, 0, 0, pixelWidth, pixelHeight, {'fillStyle': "rgb(255, 255, 255)"});
+            igv.graphics.fillRect(ctx, 0, 0, pixelWidth, pixelHeight, {'fillStyle': this.browser.theme.featureTrackBgColor});
 
             if (featureList) {
 
@@ -264,7 +264,7 @@ var igv = (function (igv) {
 
                 if (selectedFeature) {
                     const c = selectedFeature.color;
-                    selectedFeature.color = "rgb(255,0,0)";
+                    selectedFeature.color = "rgb(0,0,0)";
                     self.render.call(this, selectedFeature, bpStart, bpPerPixel, pixelHeight, ctx, options);
                     selectedFeature.color = c;
                 }
@@ -538,6 +538,7 @@ var igv = (function (igv) {
             const browser = this.browser;
 
             let color = this.color;  // default
+            console.log(color);
             if (this.config.colorBy) {
                 const colorByValue = feature[this.config.colorBy.field];
                 if (colorByValue) {
@@ -626,8 +627,8 @@ var igv = (function (igv) {
 
                         // Arrows
                         if (ePw > step + 5) {
-                            ctx.fillStyle = "white";
-                            ctx.strokeStyle = "white";
+                            ctx.fillStyle = this.browser.theme.featureTrackArrowColor;
+                            ctx.strokeStyle = this.browser.theme.featureTrackArrowColor;
                             for (let x = ePx + step / 2; x < ePx1; x += step) {
                                 // draw arrowheads along central line indicating transcribed orientation
                                 igv.graphics.strokeLine(ctx, x - direction * 2, cy - 2, x, cy);

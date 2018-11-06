@@ -64,8 +64,8 @@ var igv = (function (igv) {
         }
 
         this.order = config.order;
-        this.color = config.color || config.defaultColor || "rgb(0,0,150)";
-
+        this.color = config.color || config.defaultColor || this.browser.theme.featureTrackRectangleColor;
+        
         this.autoscaleGroup = config.autoscaleGroup;
 
         this.removable = config.removable === undefined ? true : config.removable;      // Defaults to true

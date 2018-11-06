@@ -124,7 +124,7 @@ var igv = (function (igv) {
 
             tick.drawTicks(options, tickHeight, shim, this.height);
 
-            igv.graphics.strokeLine(options.context, 0, this.height - shim, options.pixelWidth, this.height - shim);
+            igv.graphics.strokeLine(options.context, 0, this.height - shim, options.pixelWidth, this.height - shim, {"strokeStyle": igv.browser.theme.rulerTrackTickColor});
 
         }
 
@@ -222,9 +222,12 @@ var igv = (function (igv) {
             label = igv.numberFormatter(Math.floor(bp / this.unitMultiplier)) + " " + this.majorUnit;
             labelWidth = options.context.measureText(label).width;
             labelX = pixel - labelWidth / 2;
-            igv.graphics.fillText(options.context, label, labelX, height - (tickHeight / 0.75));
+            igv.graphics.fillText(options.context, label, labelX, height - (tickHeight / 0.75), {
+                'fillStyle': igv.browser.theme.rulerTrackLabelColor,
+                "strokeStyle": igv.browser.theme.rulerTrackLabelColor,
+            });
 
-            igv.graphics.strokeLine(options.context, pixel, height - tickHeight, pixel, height - shim);
+            igv.graphics.strokeLine(options.context, pixel, height - tickHeight, pixel, height - shim, {"strokeStyle": igv.browser.theme.rulerTrackTickColor});
 
             ++numberOfTicks;
         }
@@ -243,10 +246,13 @@ var igv = (function (igv) {
                 label = igv.numberFormatter(Math.floor(numer)) + " " + this.majorUnit;
                 labelWidth = options.context.measureText(label).width;
                 labelX = pixel - labelWidth / 2;
-                igv.graphics.fillText(options.context, label, labelX, height - (tickHeight / 0.75));
+                igv.graphics.fillText(options.context, label, labelX, height - (tickHeight / 0.75),{
+                    'fillStyle': igv.browser.theme.rulerTrackLabelColor,
+                    "strokeStyle": igv.browser.theme.rulerTrackLabelColor,
+                });
             }
 
-            igv.graphics.strokeLine(options.context, pixel, height - tickHeight, pixel, height - shim);
+            igv.graphics.strokeLine(options.context, pixel, height - tickHeight, pixel, height - shim, {"strokeStyle": igv.browser.theme.rulerTrackTickColor});
 
             ++numberOfTicks;
         }
