@@ -147,6 +147,11 @@
     <script src="../vendor/rbtree.js"></script>
     <script src="../vendor/canvas2svg.js"></script>
 
+    <style>
+        html, body {
+            background: #0C1421;
+        }
+    </style>
 </head>
 
 <body>
@@ -173,17 +178,58 @@
 
                 const igvDiv = document.getElementById("igvDiv");
 
-                const options =
-                    {
-                        locus: 'muc1',
-                        genome: "hg19",
-                        flanking: 1000,
-                        queryParametersSupported: true,
 
-                    };
+ var options =
+        {
+            genome: "hg19",
+            locus: "chr8:128,747,267-128,754,546",
+            theme: {
+                    bamTrackBgColor: "rgb(12,20,33)",
+                    featureTrackRectangleColor: "rgb(0,186,255)",
+                    featureTrackBgColor: "rgb(12,20,33)",
+                    featureTrackArrowColor: "rgb(255,255,255)",
+                    ideogramBgColor: "rgb(12,20,33)",
+                    rulerTrackLabelColor: "rgb(48,96,145)",
+                    rulerTrackTickColor: "rgb(48,96,145)",
+                    axisFontColor: "rgb(48,96,145)",
+                    axisBgColor: "rgb(12,20,33)"
+            },
+            tracks: [
+                {
+                    type: 'alignment',
+                    format: 'bam',
+                    url: 'https://data.broadinstitute.org/igvdata/1KG/b37/data/HG02450/alignment/HG02450.mapped.ILLUMINA.bwa.ACB.low_coverage.20120522.bam',
+                    name: 'HG02450',
+                    color: "rgb(48,96,145)", //dna color
+                    coverageColor: "rgb(255,255,255)", //reference color
+    
+                }
+
+            ]
+        };
+
+                // const options =
+                //     {
+                //         locus: 'muc1',
+                //         genome: "hg19",
+                //         flanking: 1000,
+                //         queryParametersSupported: true,
+                //         theme: {
+                //             bamTrackBgColor: "rgb(255,0,255)",
+                //         },
+                //         color: "rgb(255,0,0)",
+                //         alignmentColor: "rgb(255,0,0)",
+                //         coverageColor: "#ff0000",
+                //         // coverageColor: "rgb(255,0,0)",
+                //         // theme: {
+                //         //     axisBackground: "rgb(0,255,0)",
+                //         // }
+                //     };
 
                 igv.createBrowser(igvDiv, options)
                     .then(function (browser) {
+                        // console.log(browser);
+                        // debugger;
                         igvdev.createTrackList(document.getElementById('trackList'), browser);
                         return browser;
                     })
