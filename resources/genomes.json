@@ -13,7 +13,9 @@
         "indexURL": "https://s3.amazonaws.com/igv.org.genomes/hg38/refGene.sorted.txt.gz.tbi",
         "visibilityWindow": -1,
         "removable": false,
-        "order": 1000000
+        "order": 1000000,
+        "color": "rgb(255,0,0)",
+        "coverageColor": "rgb(0,255,0)"
       }
     ]
   },
@@ -23,6 +25,8 @@
     "fastaURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta",
     "indexURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta.fai",
     "cytobandURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/cytoBand.txt",
+    "color": "rgb(255,0,0)",
+    "coverageColor": "rgb(0,255,0)",
     "tracks": [
       {
         "name": "Refseq Genes",
@@ -31,7 +35,10 @@
         "indexURL": "https://s3.amazonaws.com/igv.org.genomes/hg19/refGene.sorted.txt.gz.tbi",
         "visibilityWindow": -1,
         "removable": false,
-        "order": 1000000
+        "order": 1000000,
+        "color": "rgb(255,0,0)",
+        "coverageColor": "rgb(0,255,0)"
+        
       }
     ]
   },

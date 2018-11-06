@@ -34,7 +34,9 @@
       "format": "refgene",
       "type": "annotation",
       "height": 50,
-      "maxRows": 500
+      "maxRows": 500,
+      "color": "rgb(255,0,0)",
+      "coverageColor": "rgb(0,255,0)"
     }
   ]
 }
