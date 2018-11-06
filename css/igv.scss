@@ -97,7 +97,7 @@ $igv-dark-grey-color: #373737;
 
     display: inline-block;
 
-    background-color: white;
+    background-color: transparent;
 
     canvas {
       width:100%;
@@ -150,11 +150,11 @@ $igv-dark-grey-color: #373737;
   height: $igv-navbar-height;
   width: 100%;
 
-  border-style: solid;
-  border-radius: 3px;
-  border-width: thin;
-
-  border-color: $igv-border-color;
+  // border-style: solid;
+  // border-radius: 3px;
+  // border-width: thin;
+  
+  // border-color: $igv-border-color;
   background-color: $igv-navbar-toggle-light-color;
 
   i {
