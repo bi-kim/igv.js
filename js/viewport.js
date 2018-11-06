@@ -275,7 +275,6 @@ var igv = (function (igv) {
      * Should be renamed.
      */
     igv.Viewport.prototype.repaint = function (tile, svg) {
-
         var self = this;
 
         //
@@ -311,9 +310,6 @@ var igv = (function (igv) {
                     viewportWidth: self.$viewport.width(),
                     viewportContainerX: referenceFrame.toPixels(referenceFrame.start - tile.startBP),
                     viewportContainerWidth: this.browser.viewportContainerWidth(),
-                    theme: {
-                        background: {'fillStyle': "rgb(255, 0, 0)"},
-                    },
                 };
 
             draw(drawConfiguration, tile.features);
