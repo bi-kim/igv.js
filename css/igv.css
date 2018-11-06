@@ -95,7 +95,7 @@
     height: 100%;
     width: 50px;
     display: inline-block;
-    background-color: white; }
+  }
   .igv-content-header .igv-ideogram-content-div {
     position: relative;
     height: 100%;
@@ -133,18 +133,20 @@
   left: 0;
   height: 32px;
   width: 100%;
-  border-style: solid;
+  border-radius: 3px;
+  /* border-style: solid;
   border-radius: 3px;
   border-width: thin;
-  border-color: #bfbfbf;
-  background-color: #f3f3f3; }
+  border-color: #bfbfbf; */
+  /* background-color: #f3f3f3; } */
+}
   .igv-navbar i {
     cursor: pointer;
-    color: #666666; }
+    color: #CCD5E4; }
   .igv-navbar i:hover,
   .igv-navbar i:focus,
   .igv-navbar i:active {
-    color: #434343; }
+    color: #fff; }
   .igv-navbar .igv-nav-bar-left-container {
     display: flex;
     flex-flow: row;
@@ -161,7 +163,7 @@
       height: 32px;
       margin-right: 16px;
       user-select: none;
-      color: #444;
+      color: #CCD6E5;
       font-family: "Open Sans", sans-serif;
       font-size: 12px;
       font-weight: 400;
@@ -184,7 +186,9 @@
           font-family: "Open Sans", sans-serif;
           font-size: 12px;
           font-weight: 400;
-          color: #444;
+          color: #CCD6E5;
+          background: #112E6D;
+          border: none;
           width: 100%;
           height: 100%; }
       .igv-navbar .igv-nav-bar-left-container .igv-genomic-location .igv-locus-size-group {
@@ -211,13 +215,15 @@
             font-family: "Open Sans", sans-serif;
             font-size: 12px;
             font-weight: 400;
-            color: #444;
+            color: #CCD6E5;
             outline: none;
-            border-style: solid;
+            border: none;
+            border-radius: 3px;
+            /* border-style: solid;
             border-radius: 3px;
             border-width: thin;
-            border-color: #bfbfbf;
-            background-color: white; }
+            border-color: #bfbfbf; */
+            background-color: #112E6D; }
           .igv-navbar .igv-nav-bar-left-container .igv-genomic-location .igv-locus-size-group .igv-search-container div {
             height: 100%; }
             .igv-navbar .igv-nav-bar-left-container .igv-genomic-location .igv-locus-size-group .igv-search-container div i {
@@ -228,7 +234,7 @@
           font-family: "Open Sans", sans-serif;
           font-size: 12px;
           font-weight: 400;
-          color: #444; }
+          color: #CCD6E5; }
   .igv-navbar .igv-nav-bar-right-container {
     display: flex;
     flex-flow: row;
@@ -261,7 +267,40 @@
       align-items: center; }
       .igv-navbar .igv-nav-bar-right-container .igv-zoom-widget div {
         cursor: pointer;
-        color: #666666; }
+        color: #CCD5E4; }
+      
+      input[type="range"] {
+          -webkit-appearance: none;
+          width: 100%;
+          height: 5px;
+          border-radius: 999px;
+          background: #112E6D;
+          outline: none;
+          opacity: 0.7;
+          -webkit-transition: .2s;
+          transition: opacity .2s;
+      }
+      
+      input[type="range"]:hover {
+          opacity: 1;
+      }
+      
+      input[type="range"]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 16px;
+          height: 16px;
+          border-radius: 999px;
+          background: #00BAFF;
+          cursor: pointer;
+      }
+      
+      input[type="range"]::-moz-range-thumb {
+          width: 16px;
+          height: 16px;
+          background: #00BAFF;
+          cursor: pointer;
+      }
 
 .igv-nav-bar-button {
   height: 18px;
@@ -273,12 +312,9 @@
   font-family: "Open Sans", sans-serif;
   font-size: 11px;
   font-weight: 200;
-  color: #737373;
-  background-color: #f3f3f3;
-  border-color: #737373;
-  border-style: solid;
-  border-width: thin;
-  border-radius: 10px; }
+  color: #CCD6E5;
+  background-color: #112E6D;
+  border-radius: 3px; }
 
 .igv-nav-bar-button-clicked {
   color: white;
@@ -485,7 +521,7 @@
   right: 0;
   width: 36px;
   height: 100%;
-  background: white;
+  background: none;
   text-align: center; }
   .igv-right-hand-gutter i {
     position: absolute;
@@ -494,11 +530,11 @@
     padding-right: 6px;
     font-size: 20px;
     cursor: pointer;
-    color: grey; }
+    color: #CCD5E4; }
   .igv-right-hand-gutter i:hover,
   .igv-right-hand-gutter i:focus,
   .igv-right-hand-gutter i:active {
-    color: #333333; }
+    color: #fff; }
 
 .igv-left-hand-gutter {
   position: absolute;
@@ -556,19 +592,20 @@
   height: 100%;
   box-sizing: border-box;
   font-size: medium;
-  border-color: #c4c4c4;
-  border-style: solid;
-  border-width: thin;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   z-index: 512;
-  background-color: #c4c4c4; }
+  background:#112E6D;
+  /* background-color: #c4c4c4; } */
+}
 
 .igv-track-manipulation-handle:hover,
 .igv-track-manipulation-handle:focus,
 .igv-track-manipulation-handle:active {
-  border-color: #7e7e7e;
-  background-color: #7e7e7e; }
+  background: #143989;
+  /* border-color: #7e7e7e; */
+  /* background-color: #7e7e7e; */
+}
 
 .igv-track-label {
   position: absolute;
@@ -600,7 +637,8 @@
 .igv-track-label:hover,
 .igv-track-label:focus,
 .igv-track-label:active {
-  background-color: rgba(0, 0, 0, 0.05); }
+  /* background-color: rgba(0, 0, 0, 0.05);  */
+}
 
 .igv-scrollbar-outer-div {
   position: absolute;
